@@ -2,18 +2,31 @@ import React from "react";
 import github from "../assets/github1.png";
 import facebook from "../assets/facebook.png";
 import linkedin from "../assets/linkedin.png";
-import gmail from "../assets/gmail.png";
-import telephone from "../assets/telephone.png";
-import decree from "../assets/decree.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAnglesRight,
+  faHeart,
+  faMailBulk,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const Contact = () => {
   return (
     <div className="flex flex-col mt-8 items-center justify-center mb-12 gap-6">
-      <h2 className="cursor-default text-2xl font-thin uppercase leading-10 text-gray-800">Contact Me?</h2>
-      <h3>💙</h3>
+      <h2 className="cursor-default text-2xl font-thin uppercase leading-10 text-gray-800">
+        Contact Me?
+      </h2>
+      <h3>
+        <FontAwesomeIcon icon={faHeart} color="darkcyan" />
+      </h3>
       <div className="flex gap-x-4">
-        <img src={gmail} alt="gmail" />
-        <img src={decree} alt="decree" />
+        <FontAwesomeIcon
+          icon={faMailBulk}
+          color="midnightblue"
+          size="2x"
+          spin
+        />
+        <FontAwesomeIcon icon={faAnglesRight} color="darkcyan" />
         <a
           href="mailto: singkhantuang97@gmail.com"
           className="underline hover:no-underline hover:text-gray-700"
@@ -22,8 +35,8 @@ export const Contact = () => {
         </a>
       </div>
       <div className="flex gap-x-4">
-        <img src={telephone} alt="telephone" />
-        <img src={decree} alt="decree" />
+        <FontAwesomeIcon icon={faPhone} color="midnightblue" size="2x" spin />
+        <FontAwesomeIcon icon={faAnglesRight} color="darkcyan" />
         <a
           href="tel: +959265826622"
           className="underline hover:no-underline hover:text-gray-700"
