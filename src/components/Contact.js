@@ -4,9 +4,9 @@ import facebook from "../assets/facebook.png";
 import linkedin from "../assets/linkedin.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faAnglesRight,
+  faEnvelope,
+  faHandPointRight,
   faHeart,
-  faMailBulk,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -21,13 +21,13 @@ export const Contact = () => {
       </h3>
       <div className="flex gap-x-4">
         <FontAwesomeIcon
-          icon={faMailBulk}
+          icon={faEnvelope}
           color="midnightblue"
           className="text-xl md:text-3xl lg:text-4xl text-slate-900"
           spin
         />
         <FontAwesomeIcon
-          icon={faAnglesRight}
+          icon={faHandPointRight}
           color="darkcyan"
           className="text-xs md:text-lg text-slate-900"
         />
@@ -46,7 +46,7 @@ export const Contact = () => {
           spin
         />
         <FontAwesomeIcon
-          icon={faAnglesRight}
+          icon={faHandPointRight}
           color="darkcyan"
           className="text-xs md:text-lg text-slate-900"
         />
@@ -58,21 +58,30 @@ export const Contact = () => {
         </a>
       </div>
       <div className="flex gap-x-8 mt-5">
-        <a href="https://github.com/Tuangpi">
+        <a
+          href="https://github.com/Tuangpi"
+          className="bg-slate-400 p-3 rounded-full hover:bg-slate-500 transition"
+        >
           <img
             src={github}
             alt="github"
             className="scale-125 hover:scale-100 transition"
           />
         </a>
-        <a href="https://www.linkedin.com/in/singkhantuang/">
+        <a
+          href="https://www.linkedin.com/in/singkhantuang/"
+          className="bg-slate-400 p-3 rounded-full hover:bg-slate-500 transition"
+        >
           <img
             src={linkedin}
             alt="linkedin"
             className="scale-125 hover:scale-100 transition"
           />
         </a>
-        <a href="https://www.facebook.com/y2keo">
+        <a
+          href="https://www.facebook.com/y2keo"
+          className="bg-slate-400 p-3 rounded-full hover:bg-slate-500 transition"
+        >
           <img
             src={facebook}
             alt="facebook"
