@@ -17,29 +17,42 @@ export const Contact = () => {
         Contact Me?
       </h2>
       <h3>
-        <FontAwesomeIcon icon={faHeart} color="darkcyan" />
+        <FontAwesomeIcon icon={faHeart} className="text-slate-900" />
       </h3>
       <div className="flex gap-x-4">
         <FontAwesomeIcon
           icon={faMailBulk}
           color="midnightblue"
-          size="2x"
+          className="text-xl md:text-3xl lg:text-4xl text-slate-900"
           spin
         />
-        <FontAwesomeIcon icon={faAnglesRight} color="darkcyan" />
+        <FontAwesomeIcon
+          icon={faAnglesRight}
+          color="darkcyan"
+          className="text-xs md:text-lg text-slate-900"
+        />
         <a
           href="mailto: singkhantuang97@gmail.com"
-          className="underline hover:no-underline hover:text-gray-700"
+          className="underline hover:no-underline hover:text-gray-700 text-sm md:text-lg"
         >
           singkhantuang97@gmail.com
         </a>
       </div>
       <div className="flex gap-x-4">
-        <FontAwesomeIcon icon={faPhone} color="midnightblue" size="2x" spin />
-        <FontAwesomeIcon icon={faAnglesRight} color="darkcyan" />
+        <FontAwesomeIcon
+          icon={faPhone}
+          color="midnightblue"
+          className="text-xl md:text-3xl lg:text-4xl text-slate-900"
+          spin
+        />
+        <FontAwesomeIcon
+          icon={faAnglesRight}
+          color="darkcyan"
+          className="text-xs md:text-lg text-slate-900"
+        />
         <a
           href="tel: +959265826622"
-          className="underline hover:no-underline hover:text-gray-700"
+          className="underline hover:no-underline hover:text-gray-700 text-sm md:text-lg"
         >
           +95-9265-826-622
         </a>

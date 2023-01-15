@@ -89,10 +89,10 @@ export const Page404 = () => {
           </g>
         </svg>
         <div className="flex flex-col justify-center items-center text-center mt-8">
-          <div className="italic font-serif font-thin text-sm">
+          <div className="italic font-serif font-thin text-xs md:text-sm">
             Looks like you got lost... Or we trying to confuse you...
           </div>
-          <div className="italic font-serif font-thin text-sm">
+          <div className="italic font-serif font-thin text-xs md:text-sm">
             Let us bring you at <Link to="/" className="text-red-700">home</Link>
           </div>
         </div>

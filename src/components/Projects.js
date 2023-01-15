@@ -7,7 +7,7 @@ export const Projects = () => {
     <>
       <h1 className="mt-8 font-thin text-2xl cursor-default">Site Projects</h1>
       <div className="flex mt-12 items-center justify-center mb-12">
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-4 gap-10">
           <div className="rounded-2xl shadow-xl shadow-slate-500 p-5 hover:shadow-slate-600">
             <a href="https://vakul.tv" target="_blank" rel="noreferrer">
               <img

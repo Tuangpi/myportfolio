@@ -36,7 +36,7 @@ export const About = () => {
         <h2 className="font-thin text-2xl cursor-default">Skills</h2>
         <div className="mt-5">
           These are the technologies I've worked with
-          <div className="flex flex-wrap gap-4 mt-3">
+          <div className="flex flex-wrap gap-4 mt-3 justify-center md:justify-start">
             <div className="px-6 pt-5 pb-3 shadow-md shadow-slate-700 hover:scale-105 hover:shadow-slate-500 transition cursor-default">
               <img src={html} alt="html" />
               <p className="mt-3 text-center">HTML</p>

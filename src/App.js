@@ -8,7 +8,7 @@ import { Page404 } from "./components/Page404";
 
 function App() {
   return (
-    <div className="w-9/12 m-auto mt-12">
+    <div className="w-11/12 sm:w-10/12 md:w-9/12 m-auto mt-12">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
