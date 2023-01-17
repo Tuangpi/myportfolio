@@ -11,9 +11,9 @@ import github from "../assets/github.png";
 import jquery from "../assets/jquery.png";
 import java from "../assets/java.png";
 import react from "../assets/react.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSmile } from "@fortawesome/free-solid-svg-icons";
 import FadeInSection from "./FadeInSection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const About = () => {
   return (
@@ -57,7 +57,7 @@ export const About = () => {
         </div>
       </FadeInSection>
       <FadeInSection>
-        <div>
+        <div className="mb-20">
           <h2 className="font-thin text-2xl cursor-default" id="skill">
             Skills
           </h2>
@@ -116,6 +116,25 @@ export const About = () => {
             </div>
           </div>
         </div>
+      </FadeInSection>
+      <FadeInSection>
+        <h2 className="font-thin text-2xl cursor-default mt-5" id="skill">
+          Resume
+        </h2>
+        <a
+          href="https://drive.google.com/file/d/1ZOAyvCM_7GuXisQ0EFxir09_uu-87cC8/view?usp=sharing"
+          className="mt-5 flex justify-start items-center gap-2 underline hover:text-slate-800"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            width="1.4rem"
+            className="mysvg"
+          >
+            <path d="M339 314.9L175.4 32h161.2l163.6 282.9H339zm-137.5 23.6L120.9 480h310.5L512 338.5H201.5zM154.1 67.4L0 338.5 80.6 480 237 208.8 154.1 67.4z" />
+          </svg>
+          My Resume
+        </a>
       </FadeInSection>
     </div>
   );

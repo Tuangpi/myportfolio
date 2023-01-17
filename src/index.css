@@ -33,6 +33,10 @@ body {
   will-change: opacity, transform, visibility;
 }
 
+.mysvg {
+  filter: invert(48%) sepia(68%) saturate(439%) hue-rotate(84deg) brightness(98%) contrast(90%);
+}
+
 .fade-in-section.is-visible {
   opacity: 1;
   font-weight: 500;
