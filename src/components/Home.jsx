@@ -16,10 +16,9 @@ export const Home = () => {
             </h1>
             <p className="w-9/12 cursor-default text-gray-800 m-auto mb-8 text-center lg:text-left lg:m-0 tracking-tight">
               <div>
-                I'm a freelance web developer with skills of building dynamic,
-                user-friendly websites. Whether you need a new website from
-                scratch or just need to update an existing one, I can help bring
-                your online vision to life.{" "}
+                Full Stack Web Developer with 4+ years of remote experience
+                building high-quality web and SaaS applications. Proficient in
+                PHP, JavaScript, TypeScript, Vue, Node.js, and API development.
               </div>
               <br />
               <div className="-mt-4">

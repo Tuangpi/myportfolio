@@ -22,9 +22,17 @@ export const About = () => {
         <h2 className="font-thin text-2xl cursor-default">About</h2>
         <div className="mt-5 mb-20 tracking-tight">
           <p>
-            I am Sing Tuang, a self-taught Web developer and a hard worker. I
-            have a strong passion for creating visually appealing and
-            user-friendly websites that are easy to navigate.
+            Results-driven Full Stack Web Developer with 4+ years of
+            professional experience delivering high- quality web and SaaS
+            applications in remote environments. Skilled in PHP, Javascript,
+            Typescript, Vue, Node.js, and API development. Highly effective in
+            async communication and remote collaboration across global teams.
+            Excels at building maintainable code, solving complex problems, and
+            learning new technologies quickly to meet evolving project needs.
+            Currently expanding expertise in software architecture, AI
+            integration, and scalable system design to grow as a well-rounded
+            software professional. Actively seeking fully remote opportunities
+            with innovative startups or product-focused companies.
           </p>
           <br />
           <p className="-mt-4">
@@ -122,7 +130,7 @@ export const About = () => {
           Resume
         </h2>
         <a
-          href="https://drive.google.com/file/d/1ZOAyvCM_7GuXisQ0EFxir09_uu-87cC8/view?usp=sharing"
+          href="https://drive.google.com/file/d/14st8frIsxEiKrh1u6qgh9l765jcKZ2CN/view?usp=sharing"
           className="mt-5 flex justify-start items-center gap-2 underline hover:text-slate-800"
         >
           <svg
