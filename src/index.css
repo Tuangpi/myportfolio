@@ -1,236 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: linear-gradient(90deg, #bcc5ce 100%, #e0e0e0 10%);
-  font-family: monospace;
-  font-size: 1.08rem;
+  margin: 0;
+  min-width: 320px;
+  background: #0f172a;
 }
 
-.text-1 {
-  font-size: 1em;
+* {
+  box-sizing: border-box;
 }
 
-.text-2 {
-  font-size: 1.02em;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.text-3 {
-  font-size: 1.04em;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-.text-4 {
-  font-size: 1.06em;
-}
-
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(20vh);
-  visibility: hidden;
-  transition: opacity 1000ms ease-out, transform 600ms ease-out,
-    visibility 1000ms ease-out;
-  will-change: opacity, transform, visibility;
-}
-
-.mysvg {
-  filter: invert(48%) sepia(68%) saturate(439%) hue-rotate(84deg) brightness(98%) contrast(90%);
-}
-
-.fade-in-section.is-visible {
-  opacity: 1;
-  font-weight: 500;
-  transform: none;
-  visibility: visible;
-}
-
-
-.container {
-  min-height: 80vh;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.page404 {
-  width: 400px;
-  height: auto;
-}
-
-#tree {
-  stroke: #59513C;
-}
-
-#wood-stump {
-  stroke: #59513C;
-  -webkit-animation: wood-stump 3s infinite ease-in-out;
-  -moz-animation: wood-stump 3s infinite ease-in-out;
-  -o-animation: wood-stump 3s infinite ease-in-out;
-  animation: wood-stump 3s infinite ease-in-out;
-}
-
-@-webkit-keyframes wood-stump {
-  0% {
-    -webkit-transform: translate(100px)
-  }
-
-  50% {
-    -webkit-transform: translate(50px);
-  }
-
-  100% {
-    -webkit-transform: translate(100px);
-  }
-}
-
-@-moz-keyframes wood-stump {
-  0% {
-    -moz-transform: translate(100px);
-  }
-
-  50% {
-    -moz-transform: translate(50px);
-  }
-
-  100% {
-    -moz-transform: translate(100px);
-  }
-}
-
-@-o-keyframes wood-stump {
-  0% {
-    -o-transform: translate(100px);
-  }
-
-  50% {
-    -o-transform: translate(50px);
-  }
-
-  100% {
-    -o-transform: translate(100px);
-  }
-}
-
-@keyframes wood-stump {
-  0% {
-    -webkit-transform: translate(100px);
-    -moz-transform: translate(100px);
-    -ms-transform: translate(100px);
-    transform: translate(100px);
-  }
-
-  50% {
-    -webkit-transform: translate(0px);
-    -moz-transform: translate(0px);
-    -ms-transform: translate(0px);
-    transform: translate(0px);
-  }
-
-  100% {
-    -webkit-transform: translate(100px);
-    -moz-transform: translate(100px);
-    -ms-transform: translate(100px);
-    transform: translate(100px);
-  }
-}
-
-
-#leaf {
-  stroke: #59513C;
-  -webkit-animation: leaf 7s infinite ease-in-out;
-  -moz-animation: leaf 7s infinite ease-in-out;
-  -o-animation: leaf 7s infinite ease-in-out;
-  animation: leaf 7s infinite ease-in-out;
-}
-
-@-webkit-keyframes leaf {
-  0% {
-    -webkit-transform: translate(0, 70px)
-  }
-
-  50% {
-    -webkit-transform: translate(0, 50px);
-  }
-
-  100% {
-    -webkit-transform: translate(0, 70px);
-  }
-}
-
-@-moz-keyframes leaf {
-  0% {
-    -moz-transform: translate(0, 70px);
-  }
-
-  50% {
-    -moz-transform: translate(0, 50px);
-  }
-
-  100% {
-    -moz-transform: translate(0, 70px);
-  }
-}
-
-@-o-keyframes leaf {
-  0% {
-    -o-transform: translate(0, 70px);
-  }
-
-  50% {
-    -o-transform: translate(0, 50px);
-  }
-
-  100% {
-    -o-transform: translate(0, 70px);
-  }
-}
-
-@keyframes leaf {
-  0% {
-    -webkit-transform: translate(0, 70px);
-    -moz-transform: translate(0, 70px);
-    -ms-transform: translate(0, 70px);
-    transform: translate(0, 70px);
-  }
-
-  50% {
-    -webkit-transform: translate(0px);
-    -moz-transform: translate(0px);
-    -ms-transform: translate(0px);
-    transform: translate(0px);
-  }
-
-  100% {
-    -webkit-transform: translate(0, 70px);
-    -moz-transform: translate(0, 70px);
-    -ms-transform: translate(0, 70px);
-    transform: translate(0, 70px);
-  }
-}
-
-#border {
-  stroke: #59513C;
-}
-
-#Page {
-  fill: #59513C;
-}
-
-#notFound {
-  fill: #A7444B;
+::selection {
+  background: rgba(255, 122, 89, 0.25);
 }
