@@ -12,10 +12,15 @@ body {
   margin: 0;
   min-width: 320px;
   background: #0f172a;
+  color: #e2e8f0;
 }
 
 * {
   box-sizing: border-box;
+}
+
+#root {
+  isolation: isolate;
 }
 
 a {
