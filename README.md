@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Sing Khan Tuang Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio website for Sing Khan Tuang, a full stack web developer focused on thoughtful product building, modern UX, and reliable remote collaboration.
 
-## Available Scripts
+Built with `React`, `TypeScript`, `Vite`, and `Tailwind CSS`.
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+This site presents:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- A hero section with introduction, resume link, and availability
+- An about section with background and technical skills
+- A selected work section featuring real client and product projects
+- A contact section with email, phone, and social links
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The content is driven from a single data file so personal details, skills, projects, and links are easy to update.
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```text
+src/
+  assets/              Images used across the site
+  components/          Reusable UI sections
+  data/portfolio.ts    Portfolio content and links
+  App.tsx              Main page composition
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js 18+
+- npm
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Install dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Start the development server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run dev
+```
 
-## Learn More
+### Build for production
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Preview the production build
 
-### Code Splitting
+```bash
+npm run preview
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Customizing Content
 
-### Analyzing the Bundle Size
+Most portfolio content lives in [`src/data/portfolio.ts`](./src/data/portfolio.ts).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Update this file to change:
 
-### Making a Progressive Web App
+- Hero text and resume link
+- About section copy
+- Skills list
+- Project cards
+- Contact links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Images can be replaced in [`src/assets`](./src/assets) and referenced from the same data file.
 
-### Advanced Configuration
+## Featured Projects
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Vakul Project
+- ThaPyayNyo
+- Glampro
+- Kenpetmed
 
-### Deployment
+## Live Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[Live Demo](https://m-yportfolio.pages.dev/)
 
-### `npm run build` fails to minify
+## Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm run dev` - Start the Vite dev server
+- `npm run build` - Type-check and create a production build
+- `npm run preview` - Preview the production build locally
+
+## License
+
+This project is for personal portfolio use.
