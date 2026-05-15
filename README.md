@@ -33,6 +33,10 @@ src/
   App.tsx              Main page composition
 ```
 
+## Live Demo
+
+[Live Demo](https://m-yportfolio.pages.dev/)
+
 ## Getting Started
 
 ### Prerequisites
@@ -84,10 +88,6 @@ Images can be replaced in [`src/assets`](./src/assets) and referenced from the s
 - ThaPyayNyo
 - Glampro
 - Kenpetmed
-
-## Live Demo
-
-[Live Demo](https://m-yportfolio.pages.dev/)
 
 ## Scripts
 
