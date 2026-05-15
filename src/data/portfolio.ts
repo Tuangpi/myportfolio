@@ -110,5 +110,5 @@ export const profile = {
     "I’m especially interested in fully remote opportunities with innovative startups and product-focused companies."
   ],
   resumeHref:
-    "https://drive.google.com/file/d/14st8frIsxEiKrh1u6qgh9l765jcKZ2CN/view?usp=sharing"
+    "https://drive.google.com/file/d/1fA2ClEfBuiGgvJd5HK2QNObZJefHIJ7h/view?usp=sharing"
 };
