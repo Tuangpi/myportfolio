@@ -1,8 +1,14 @@
-import heroImage from "../assets/hero1.jpg";
-import projectVakul from "../assets/img1.png";
+import heroImage from "../assets/hero.webp";
+import projectVakul from "../assets/img1.webp";
 import projectSchool from "../assets/img3.png";
 import projectGlampro from "../assets/img4.png";
 import projectKenpetmed from "../assets/img5.png";
+
+export const navItems = [
+  { index: "01", label: "About", href: "#about" },
+  { index: "02", label: "Work", href: "#work" },
+  { index: "03", label: "Contact", href: "#contact" }
+];
 
 export const skills = [
   "PHP",
@@ -17,6 +23,21 @@ export const skills = [
   "API Development",
   "GitHub",
   "Remote Collaboration"
+];
+
+export const skillGroups = [
+  {
+    label: "Languages / data",
+    items: ["PHP", "JavaScript", "TypeScript", "MySQL"]
+  },
+  {
+    label: "Frameworks / tools",
+    items: ["Vue", "React", "Node.js", "Laravel", "Tailwind CSS", "GitHub"]
+  },
+  {
+    label: "Practice",
+    items: ["API Development", "Remote Collaboration"]
+  }
 ];
 
 export const stats = [
@@ -88,16 +109,17 @@ export const contactLinks = [
   },
   {
     label: "Facebook",
-    value: "facebook.com/y2keo",
+    value: "facebook.com/SingKhanTuang",
     href: "https://www.facebook.com/SingKhanTuang"
   }
 ];
 
 export const profile = {
   heroImage,
-  initials: "Sing Khan Tuang",
-  role: "Full Stack Web Developer",
+  initials: "ST",
   name: "Sing Khan Tuang",
+  role: "Full Stack Web Developer",
+  timeZone: "Asia/Yangon",
   headline: "Building thoughtful web products with clean systems and modern UX.",
   intro:
     "I’m Sing Khan Tuang, a full stack developer with 4+ years of remote experience building high-quality web and SaaS applications.",
@@ -110,5 +132,5 @@ export const profile = {
     "I’m especially interested in fully remote opportunities with innovative startups and product-focused companies."
   ],
   resumeHref:
-    "https://drive.google.com/file/d/1fA2ClEfBuiGgvJd5HK2QNObZJefHIJ7h/view?usp=sharing"
+    "https://drive.google.com/file/d/185MC_D8OCYMcBL5iBB2EFF_VEpi-qtWU/view?usp=sharing"
 };

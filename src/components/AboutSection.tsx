@@ -1,40 +1,81 @@
-import SectionHeading from "./SectionHeading";
-import { profile, skills } from "../data/portfolio";
+import SectionHeader from "./SectionHeader";
+import Reveal from "./Reveal";
+import { profile, skillGroups, stats } from "../data/portfolio";
 
 function AboutSection() {
-  return (
-    <section id="about" className="bg-sand py-24 text-ink">
-      <div className="mx-auto grid w-[min(1120px,92vw)] gap-14 lg:grid-cols-[0.9fr_1.1fr]">
-        <SectionHeading eyebrow="About" title={profile.aboutTitle} accent="teal" />
-        <div className="space-y-6 text-lg leading-8 text-slate-700">
-          {profile.aboutBody.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-      </div>
+  const facts = [
+    { label: "Role", value: "Full stack developer" },
+    { label: "Experience", value: `${stats[0]?.value ?? "4+"} years` },
+    { label: "Availability", value: "Open to remote" },
+    { label: "Time zone", value: "GMT+6:30" }
+  ];
 
-      <div className="mx-auto mt-16 w-[min(1120px,92vw)]">
-        <div className="rounded-[2rem] bg-white p-8 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-coral">Skills</p>
-              <h3 className="mt-3 font-display text-3xl font-bold text-ink">
-                Technologies I work with
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-slate-500">
-                A balanced toolkit across frontend, backend, and product delivery.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:-translate-y-0.5 hover:border-coral/40 hover:bg-[#fff4ef]"
+  return (
+    <section id="about" className="py-20 sm:py-28">
+      <div className="shell">
+        <Reveal>
+          <SectionHeader index="01" eyebrow="About" title={profile.aboutTitle} />
+        </Reveal>
+
+        <div className="mt-12 grid gap-10 lg:mt-14 lg:grid-cols-[0.34fr_1fr] lg:gap-16">
+          <Reveal className="lg:sticky lg:top-28 lg:self-start">
+            <p className="mono-label">Profile</p>
+
+            <dl className="mt-5 space-y-2.5">
+              {facts.map((fact) => (
+                <div
+                  key={fact.label}
+                  className="flex items-baseline justify-between gap-4 border-b border-white/5 pb-2"
                 >
-                  {skill}
-                </span>
+                  <dt className="font-mono text-[0.6rem] uppercase tracking-[0.18em] text-faint">
+                    {fact.label}
+                  </dt>
+                  <dd className="font-mono text-[0.65rem] uppercase tracking-[0.12em] text-ink">
+                    {fact.value}
+                  </dd>
+                </div>
               ))}
+            </dl>
+          </Reveal>
+
+          <div className="space-y-6 text-base leading-8 text-muted sm:text-lg sm:leading-9">
+            {profile.aboutBody.map((paragraph, index) => (
+              <Reveal key={paragraph} delay={index * 60}>
+                <p className={index === 0 ? "text-ink" : undefined}>{paragraph}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <Reveal>
+            <div className="flex items-center gap-4">
+              <p className="mono-label">Stack</p>
+              <span aria-hidden="true" className="h-px flex-1 bg-white/10" />
             </div>
+          </Reveal>
+
+          <div className="mt-6 grid gap-3 md:grid-cols-3">
+            {skillGroups.map((group, index) => (
+              <Reveal key={group.label} delay={index * 60} className="h-full">
+                <div className="h-full border border-white/10 bg-surface/60 p-6 transition duration-300 hover:border-accent/30">
+                  <p className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-accent">
+                    {group.label}
+                  </p>
+
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <li
+                        key={item}
+                        className="border border-white/10 bg-white/[0.04] px-2.5 py-1.5 text-[0.8rem] font-medium leading-none text-ink transition duration-200 hover:border-accent/50 hover:bg-accent/5 hover:text-accent"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </div>

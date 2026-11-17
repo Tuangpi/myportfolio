@@ -4,32 +4,46 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#0f172a",
-        mist: "#e2e8f0",
-        sand: "#f6efe7",
-        coral: "#ff7a59",
-        teal: "#2e8b87"
+        canvas: "#08090a",
+        surface: "#101113",
+        accent: "#c7f94b",
+        ink: "#f4f4f5",
+        muted: "#a1a1aa",
+        faint: "#8b8b96"
       },
       fontFamily: {
-        sans: ["Sora", "system-ui", "sans-serif"],
-        display: ["Space Grotesk", "system-ui", "sans-serif"]
+        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+        display: ["Space Grotesk", "Inter", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"]
       },
-      boxShadow: {
-        glow: "0 20px 60px rgba(15, 23, 42, 0.18)"
+      fontSize: {
+        eyebrow: ["0.6875rem", { lineHeight: "1", letterSpacing: "0.22em" }],
+        "display-1": [
+          "clamp(2.6rem, 6.4vw, 5.75rem)",
+          { lineHeight: "0.96", letterSpacing: "-0.045em" }
+        ],
+        "display-2": [
+          "clamp(2rem, 4.2vw, 3.5rem)",
+          { lineHeight: "1.02", letterSpacing: "-0.035em" }
+        ],
+        "display-3": [
+          "clamp(1.5rem, 2.6vw, 2.25rem)",
+          { lineHeight: "1.15", letterSpacing: "-0.02em" }
+        ]
       },
       keyframes: {
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" }
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" }
         },
-        rise: {
-          "0%": { opacity: "0", transform: "translateY(24px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" }
+        "pulse-soft": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.2" }
         }
       },
       animation: {
-        float: "float 6s ease-in-out infinite",
-        rise: "rise 700ms ease-out forwards"
+        marquee: "marquee 45s linear infinite",
+        "pulse-soft": "pulse-soft 2.6s ease-in-out infinite"
       }
     }
   },

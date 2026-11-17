@@ -1,115 +1,115 @@
-import { ArrowRight, Download, Sparkles } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import { profile, stats } from "../data/portfolio";
+import Reveal from "./Reveal";
 
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(255,122,89,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(45,212,191,0.16),transparent_30%)]" />
-      <div className="absolute left-1/2 top-0 -z-10 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-coral/10 blur-[120px]" />
-
-      <section className="mx-auto grid w-[min(1180px,92vw)] gap-16 pb-24 pt-10 md:grid-cols-[1.05fr_0.95fr] md:items-center md:pb-32">
-        <div className="animate-rise">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-xl">
-            <Sparkles className="h-4 w-4 text-coral" />
-            <span className="text-xs uppercase tracking-[0.28em] text-sand/90">
-              {profile.role}
+    <section className="pt-28 sm:pt-32 lg:pt-36">
+      <div className="shell">
+        <Reveal>
+          <p className="flex flex-wrap items-center gap-3 font-mono text-eyebrow uppercase text-muted">
+            <span aria-hidden="true" className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-pulse-soft rounded-full bg-accent" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
             </span>
-          </div>
+            <span className="text-ink">{profile.role}</span>
+            <span aria-hidden="true" className="hidden h-px w-6 bg-white/20 sm:block" />
+            <span className="text-faint">Available for remote work</span>
+          </p>
+        </Reveal>
 
-          <h1 className="max-w-4xl font-display text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+        <Reveal delay={80}>
+          <h1 className="mt-8 max-w-5xl font-display text-display-1 text-ink">
             {profile.headline}
           </h1>
+        </Reveal>
 
-          <p className="mt-7 max-w-2xl text-base leading-8 text-slate-500 sm:text-lg">
-            {profile.intro}
-          </p>
+        <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-[1fr_0.58fr] lg:items-start lg:gap-16">
+          <div className="flex flex-col gap-9">
+            <div>
+              <Reveal delay={140}>
+                <p className="max-w-2xl text-base leading-8 text-muted sm:text-lg sm:leading-9">
+                  {profile.intro}
+                </p>
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base sm:leading-8">
+                  {profile.description}
+                </p>
+              </Reveal>
+            </div>
 
-          <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            {profile.description}
-          </p>
+            <Reveal delay={200}>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a
+                  href="#contact"
+                  className="group inline-flex items-center justify-center gap-2 bg-accent px-6 py-3.5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-canvas transition hover:bg-white"
+                >
+                  Let&apos;s work together
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </a>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="#contact"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-coral px-7 py-3 text-sm font-semibold text-white shadow-[0_10px_35px_rgba(255,122,89,0.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#ff6843]"
-            >
-              Let&apos;s work together
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
-
-            <a
-              href={profile.resumeHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3 text-sm font-semibold text-white backdrop-blur transition-all duration-300 hover:border-white/30 hover:bg-white/[0.06]"
-            >
-              <Download className="h-4 w-4" />
-              View resume
-            </a>
+                <a
+                  href={profile.resumeHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 border border-white/15 px-6 py-3.5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-ink transition hover:border-accent/60 hover:text-accent"
+                >
+                  <Download className="h-4 w-4" />
+                  View resume
+                </a>
+              </div>
+            </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-4 sm:grid-cols-3">
+          <Reveal delay={160} className="w-full">
+            <div className="relative">
+              <div className="group relative border border-white/10 bg-surface p-2">
+                <div className="overflow-hidden">
+                  <img
+                    src={profile.heroImage}
+                    alt={`${profile.name} working at his desk in a bright office`}
+                    width={1254}
+                    height={1254}
+                    loading="eager"
+                    fetchPriority="high"
+                    className="aspect-square w-full object-cover object-center transition duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+                  />
+                </div>
+
+                <div className="mt-2 flex items-center justify-between gap-3 px-1 pt-1 font-mono text-[0.55rem] uppercase tracking-[0.18em] text-faint">
+                  <span>{profile.name}</span>
+                  <span className="text-accent">Open to work</span>
+                </div>
+              </div>
+
+              <span
+                aria-hidden="true"
+                className="absolute -left-2 -top-2 h-5 w-5 border-l border-t border-accent/70"
+              />
+              <span
+                aria-hidden="true"
+                className="absolute -bottom-2 -right-2 h-5 w-5 border-b border-r border-accent/70"
+              />
+            </div>
+          </Reveal>
+        </div>
+
+        <Reveal delay={120}>
+          <dl className="mt-16 grid gap-3 sm:grid-cols-3">
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="group rounded-3xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.06]"
+                className="group flex flex-col border border-white/10 bg-surface/60 p-5 transition duration-300 hover:border-accent/40 hover:bg-surface sm:p-6"
               >
-                <p className="font-display text-3xl font-bold text-white">
-                  {stat.value}
-                </p>
-
-                <div className="mt-3 h-px w-full bg-gradient-to-r from-coral/40 to-transparent" />
-
-                <p className="mt-3 text-sm leading-6 text-slate-300">
+                <dt className="order-2 mt-4 font-mono text-[0.62rem] uppercase leading-5 tracking-[0.16em] text-muted">
                   {stat.label}
-                </p>
+                </dt>
+
+                <dd className="order-1 font-display text-display-3 text-ink">{stat.value}</dd>
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-xl animate-float">
-          <div className="absolute -left-10 top-12 h-44 w-44 rounded-full bg-coral/25 blur-3xl" />
-          <div className="absolute -bottom-10 right-0 h-52 w-52 rounded-full bg-teal/20 blur-3xl" />
-
-          <div className="relative overflow-hidden rounded-[2.2rem] border border-white/10 bg-white/[0.05] p-4 shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
-            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-
-            <img
-              src={profile.heroImage}
-              alt={`Portrait of ${profile.name}`}
-              className="h-[30rem] w-full rounded-[1.7rem] object-cover object-center"
-            />
-
-            <div className="absolute bottom-8 left-1/2 w-[88%] -translate-x-1/2 rounded-[1.6rem] border border-white/10 bg-[#0f172ad9] px-6 py-5 shadow-2xl backdrop-blur-xl">
-              <p className="text-xs uppercase tracking-[0.25em] text-sand/70">
-                Currently focused on
-              </p>
-
-              <p className="mt-3 font-display text-xl leading-relaxed text-white">
-                Building scalable SaaS products, polished frontend experiences,
-                and reliable backend systems.
-              </p>
-            </div>
-          </div>
-
-          <div className="absolute -left-6 top-10 hidden rounded-2xl border border-white/10 bg-[#0f172ad9] px-5 py-4 backdrop-blur-xl lg:block">
-            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
-              Experience
-            </p>
-            <p className="mt-2 font-display text-2xl text-white">5+ Years</p>
-          </div>
-
-          <div className="absolute -bottom-5 right-0 hidden rounded-2xl border border-white/10 bg-[#0f172ad9] px-5 py-4 backdrop-blur-xl lg:block">
-            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
-              Availability
-            </p>
-            <p className="mt-2 font-display text-2xl text-white">
-              Open to work
-            </p>
-          </div>
-        </div>
-      </section>
+          </dl>
+        </Reveal>
+      </div>
     </section>
   );
 }

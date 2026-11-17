@@ -1,23 +1,44 @@
 import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import ProjectsSection from "./components/ProjectsSection";
+import ScrollProgress from "./components/ScrollProgress";
+import StackMarquee from "./components/StackMarquee";
+
+const columns = [0, 1, 2, 3];
 
 function App() {
   return (
-    <div className="min-h-screen bg-ink text-slate-100">
-      <div className="absolute inset-x-0 top-0 -z-0 h-[42rem] bg-[radial-gradient(circle_at_top_left,_rgba(255,122,89,0.28),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(46,139,135,0.24),_transparent_28%),linear-gradient(180deg,_#0f172a_0%,_#111827_55%,_#f6efe7_55%,_#f6efe7_100%)]" />
-      <div className="absolute left-0 top-24 -z-0 h-64 w-64 rounded-full bg-coral/10 blur-3xl" />
-      <div className="absolute right-0 top-[28rem] -z-0 h-80 w-80 rounded-full bg-teal/10 blur-3xl" />
+    <div id="top" className="relative min-h-screen overflow-x-clip bg-canvas">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-accent focus:px-4 focus:py-2.5 focus:font-mono focus:text-[0.68rem] focus:uppercase focus:tracking-[0.18em] focus:text-canvas"
+      >
+        Skip to content
+      </a>
+
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 hidden lg:block">
+        <div className="shell grid h-full grid-cols-4">
+          {columns.map((column) => (
+            <div key={column} className="border-l border-white/[0.04] last:border-r" />
+          ))}
+        </div>
+      </div>
+
+      <ScrollProgress />
       <Header />
 
-      <main id="top" className="relative z-10">
+      <main id="main" tabIndex={-1} className="relative z-10 outline-none">
         <HeroSection />
+        <StackMarquee />
         <AboutSection />
         <ProjectsSection />
         <ContactSection />
       </main>
+
+      <Footer />
     </div>
   );
 }
