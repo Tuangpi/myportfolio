@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   html {
@@ -43,12 +43,12 @@
   }
 
   ::selection {
-    background: rgba(199, 249, 75, 0.28);
-    color: #ffffff;
+    background: #bfdbfe;
+    color: #0f172a;
   }
 
   :focus-visible {
-    outline: 2px solid #c7f94b;
+    outline: 2px solid #2563eb;
     outline-offset: 3px;
   }
 
@@ -57,15 +57,17 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #0b0c0e;
+    background: #f1f5f9;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #26282c;
+    background: #cbd5e1;
+    border: 2px solid #f1f5f9;
+    border-radius: 999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #34373c;
+    background: #94a3b8;
   }
 }
 
@@ -77,6 +79,10 @@
 
   .mono-label {
     @apply font-mono text-eyebrow uppercase text-muted;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-surface shadow-[0_12px_32px_rgba(15,23,42,0.05)];
   }
 }
 

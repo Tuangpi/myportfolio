@@ -26,7 +26,7 @@ function SectionHeader({
       <div>
         <div className="flex items-center gap-3 font-mono text-eyebrow uppercase text-muted">
           <span className="text-accent">{index}</span>
-          <span aria-hidden="true" className="h-px w-8 bg-white/20" />
+          <span aria-hidden="true" className="h-px w-8 bg-line" />
           <span>{eyebrow}</span>
         </div>
 

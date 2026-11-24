@@ -7,24 +7,19 @@ import ProjectsSection from "./components/ProjectsSection";
 import ScrollProgress from "./components/ScrollProgress";
 import StackMarquee from "./components/StackMarquee";
 
-const columns = [0, 1, 2, 3];
-
 function App() {
   return (
     <div id="top" className="relative min-h-screen overflow-x-clip bg-canvas">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-accent focus:px-4 focus:py-2.5 focus:font-mono focus:text-[0.68rem] focus:uppercase focus:tracking-[0.18em] focus:text-canvas"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2.5 focus:font-mono focus:text-[0.68rem] focus:uppercase focus:tracking-[0.18em] focus:text-white"
       >
         Skip to content
       </a>
 
-      <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 hidden lg:block">
-        <div className="shell grid h-full grid-cols-4">
-          {columns.map((column) => (
-            <div key={column} className="border-l border-white/[0.04] last:border-r" />
-          ))}
-        </div>
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+        <div className="absolute -left-32 top-16 h-80 w-80 rounded-full bg-blue-100/60 blur-3xl" />
+        <div className="absolute -right-24 top-[32rem] h-96 w-96 rounded-full bg-sky-100/50 blur-3xl" />
       </div>
 
       <ScrollProgress />

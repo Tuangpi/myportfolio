@@ -9,7 +9,7 @@ function ProjectsSection() {
   const activeProject = projects[activeIndex] ?? projects[0];
 
   return (
-    <section id="work" className="border-t border-white/10 py-20 sm:py-28">
+    <section id="work" className="border-t border-line py-20 sm:py-28">
       <div className="shell">
         <Reveal>
           <SectionHeader
@@ -22,19 +22,19 @@ function ProjectsSection() {
         </Reveal>
 
         <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-[1fr_0.8fr] lg:items-start lg:gap-14">
-          <ul className="border-t border-white/10">
+          <ul className="border-t border-line">
             {projects.map((project, index) => {
               const isActive = index === activeIndex;
 
               return (
-                <li key={project.name} className="border-b border-white/10">
+                <li key={project.name} className="border-b border-line">
                   <a
                     href={project.href}
                     target="_blank"
                     rel="noreferrer"
                     onMouseEnter={() => setActiveIndex(index)}
                     onFocus={() => setActiveIndex(index)}
-                    className="group block py-7 sm:py-8"
+                    className="group block rounded-xl py-7 transition sm:py-8"
                   >
                     <div className="flex items-start justify-between gap-6">
                       <div className="flex items-baseline gap-4 sm:gap-5">
@@ -69,7 +69,7 @@ function ProjectsSection() {
                       {project.summary}
                     </p>
 
-                    <div className="mt-5 border border-white/10 bg-surface p-1.5 lg:hidden">
+                      <div className="mt-5 overflow-hidden rounded-xl border border-line bg-surface p-1.5 shadow-sm lg:hidden">
                       <img
                         src={project.image}
                         alt={`${project.name} interface preview`}
@@ -86,8 +86,8 @@ function ProjectsSection() {
           </ul>
 
           <div className="hidden lg:sticky lg:top-28 lg:block">
-            <div className="border border-white/10 bg-surface p-2">
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-canvas">
+            <div className="card p-2.5">
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-slate-100">
                 {projects.map((project, index) => (
                   <img
                     key={project.name}

@@ -13,7 +13,7 @@ function HeroSection() {
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
             </span>
             <span className="text-ink">{profile.role}</span>
-            <span aria-hidden="true" className="hidden h-px w-6 bg-white/20 sm:block" />
+            <span aria-hidden="true" className="hidden h-px w-6 bg-line sm:block" />
             <span className="text-faint">Available for remote work</span>
           </p>
         </Reveal>
@@ -41,7 +41,7 @@ function HeroSection() {
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
                   href="#contact"
-                  className="group inline-flex items-center justify-center gap-2 bg-accent px-6 py-3.5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-canvas transition hover:bg-white"
+                  className="group inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3.5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md"
                 >
                   Let&apos;s work together
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -51,7 +51,7 @@ function HeroSection() {
                   href={profile.resumeHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 border border-white/15 px-6 py-3.5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-ink transition hover:border-accent/60 hover:text-accent"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-surface px-6 py-3.5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-ink shadow-sm transition hover:border-accent/50 hover:text-accent"
                 >
                   <Download className="h-4 w-4" />
                   View resume
@@ -62,8 +62,8 @@ function HeroSection() {
 
           <Reveal delay={160} className="w-full">
             <div className="relative">
-              <div className="group relative border border-white/10 bg-surface p-2">
-                <div className="overflow-hidden">
+              <div className="group card relative p-2.5">
+                <div className="overflow-hidden rounded-xl">
                   <img
                     src={profile.heroImage}
                     alt={`${profile.name} working at his desk in a bright office`}
@@ -83,11 +83,11 @@ function HeroSection() {
 
               <span
                 aria-hidden="true"
-                className="absolute -left-2 -top-2 h-5 w-5 border-l border-t border-accent/70"
+                className="absolute -left-2 -top-2 h-5 w-5 rounded-tl-lg border-l-2 border-t-2 border-accent/70"
               />
               <span
                 aria-hidden="true"
-                className="absolute -bottom-2 -right-2 h-5 w-5 border-b border-r border-accent/70"
+                className="absolute -bottom-2 -right-2 h-5 w-5 rounded-br-lg border-b-2 border-r-2 border-accent/70"
               />
             </div>
           </Reveal>
@@ -98,7 +98,7 @@ function HeroSection() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="group flex flex-col border border-white/10 bg-surface/60 p-5 transition duration-300 hover:border-accent/40 hover:bg-surface sm:p-6"
+                className="group flex flex-col rounded-2xl border border-line bg-surface p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_12px_28px_rgba(15,23,42,0.08)] sm:p-6"
               >
                 <dt className="order-2 mt-4 font-mono text-[0.62rem] uppercase leading-5 tracking-[0.16em] text-muted">
                   {stat.label}

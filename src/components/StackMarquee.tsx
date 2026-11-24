@@ -4,7 +4,7 @@ function StackMarquee() {
   return (
     <section
       aria-label="Technologies I work with"
-      className="relative mt-16 overflow-hidden border-y border-white/10 py-4 sm:mt-20"
+      className="relative mt-16 overflow-hidden border-y border-line py-4 sm:mt-20"
     >
       <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
         {[0, 1].map((copy) => (

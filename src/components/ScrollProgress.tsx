@@ -29,7 +29,7 @@ function ScrollProgress() {
   }, []);
 
   return (
-    <div aria-hidden="true" className="fixed inset-x-0 top-0 z-50 h-0.5 bg-white/5">
+    <div aria-hidden="true" className="fixed inset-x-0 top-0 z-50 h-0.5 bg-line/80">
       <div
         className="h-full origin-left bg-accent transition-transform duration-150 ease-out"
         style={{ transform: `scaleX(${progress})` }}

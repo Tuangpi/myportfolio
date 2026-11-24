@@ -8,7 +8,7 @@ function ContactSection() {
   const otherLinks = contactLinks.filter((item) => item.label !== "Email");
 
   return (
-    <section id="contact" className="border-t border-white/10 py-20 sm:py-28">
+    <section id="contact" className="border-t border-line py-20 sm:py-28">
       <div className="shell">
         <Reveal>
           <SectionHeader
@@ -24,7 +24,7 @@ function ContactSection() {
           <Reveal delay={100}>
             <a
               href={emailLink.href}
-              className="group mt-12 inline-flex items-center gap-x-4 border-b border-accent/30 pb-2.5 text-ink transition hover:border-accent hover:text-accent sm:mt-14"
+              className="group mt-12 inline-flex items-center gap-x-4 border-b-2 border-accent/25 pb-2.5 text-ink transition hover:border-accent hover:text-accent sm:mt-14"
             >
               <span className="whitespace-nowrap font-display text-[clamp(1.15rem,5.2vw,2.25rem)] leading-tight tracking-[-0.02em]">
                 {emailLink.value}
@@ -49,7 +49,7 @@ function ContactSection() {
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noreferrer" : undefined}
                   aria-label={`${item.label}: ${item.value}`}
-                  className="group flex flex-col border border-white/10 bg-surface/60 p-5 transition duration-300 hover:border-accent/40 hover:bg-surface"
+                  className="group flex flex-col rounded-2xl border border-line bg-surface p-5 shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_12px_28px_rgba(15,23,42,0.08)]"
                 >
                   <span className="flex items-center gap-3">
                     <span className="flex-1 truncate font-mono text-[0.58rem] uppercase tracking-[0.2em] text-faint transition group-hover:text-accent">

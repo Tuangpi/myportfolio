@@ -20,7 +20,7 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="relative z-10 border-t border-white/10 py-9">
+    <footer className="relative z-10 border-t border-line py-9">
       <div className="shell flex flex-col gap-4 font-mono text-[0.6rem] uppercase tracking-[0.18em] text-faint sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-6">
         <p>
           © {new Date().getFullYear()} {profile.name}

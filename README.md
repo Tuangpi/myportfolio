@@ -27,16 +27,17 @@ The content is driven from a single data file so personal details, skills, proje
 
 ## Design System
 
-The visual language is dark, technical, and editorial.
+The visual language is light, calm, and modern, pairing an off-white canvas with clean white cards, navy type, and a restrained blue accent.
 
 | Token | Value | Usage |
 | --- | --- | --- |
-| `canvas` | `#08090a` | Page background |
-| `surface` | `#101113` | Panels and image frames |
-| `accent` | `#c7f94b` | Acid-lime highlight, links, focus rings |
-| `ink` | `#f4f4f5` | Primary text |
-| `muted` | `#a1a1aa` | Body copy |
-| `faint` | `#8b8b96` | Micro labels and metadata |
+| `canvas` | `#f8fafc` | Page background |
+| `surface` | `#ffffff` | Cards, panels, and image frames |
+| `accent` | `#2563eb` | Blue highlight, links, focus rings |
+| `ink` | `#0f172a` | Primary text |
+| `muted` | `#475569` | Body copy |
+| `faint` | `#64748b` | Micro labels and metadata |
+| `line` | `#e2e8f0` | Borders and separators |
 
 Tokens, fluid display type sizes, and animations live in [`tailwind.config.js`](./tailwind.config.js). Base element styles, focus rings, and the reduced-motion guards live in [`src/index.css`](./src/index.css).
 

@@ -16,7 +16,7 @@ export const skills = [
   "TypeScript",
   "Vue",
   "React",
-  "Node.js",
+  "Express.js",
   "Laravel",
   "Tailwind CSS",
   "MySQL",
@@ -32,7 +32,7 @@ export const skillGroups = [
   },
   {
     label: "Frameworks / tools",
-    items: ["Vue", "React", "Node.js", "Laravel", "Tailwind CSS", "GitHub"]
+    items: ["Vue", "React", "Express.js", "Laravel", "Tailwind CSS", "GitHub"]
   },
   {
     label: "Practice",
@@ -124,10 +124,10 @@ export const profile = {
   intro:
     "I’m Sing Khan Tuang, a full stack developer with 4+ years of remote experience building high-quality web and SaaS applications.",
   description:
-    "I work across PHP, JavaScript, TypeScript, Vue, Node.js, and API-driven systems with a focus on maintainable code, async collaboration, and polished product delivery.",
+    "I work across PHP, JavaScript, TypeScript, Vue, and Express.js with a focus on maintainable code, async collaboration, and polished product delivery.",
   aboutTitle: "A practical builder with a product mindset.",
   aboutBody: [
-    "I build maintainable web applications for teams that care about reliability, clarity, and forward momentum. My background includes PHP, JavaScript, TypeScript, Vue, Node.js, API development, and production support across remote environments.",
+    "I build maintainable web applications for teams that care about reliability, clarity, and forward momentum. My background includes PHP, JavaScript, TypeScript, Vue, Express.js, API development, and production support across remote environments.",
     "I enjoy creating solid foundations, learning fast, and improving systems over time. Right now I’m continuing to grow in software architecture, scalable design, and AI integration.",
     "I’m especially interested in fully remote opportunities with innovative startups and product-focused companies."
   ],

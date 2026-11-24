@@ -4,12 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        canvas: "#08090a",
-        surface: "#101113",
-        accent: "#c7f94b",
-        ink: "#f4f4f5",
-        muted: "#a1a1aa",
-        faint: "#8b8b96"
+        canvas: "#f8fafc",
+        surface: "#ffffff",
+        accent: "#2563eb",
+        ink: "#0f172a",
+        muted: "#475569",
+        faint: "#64748b",
+        line: "#e2e8f0",
+        soft: "#eff6ff"
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
